@@ -1,0 +1,41 @@
+---
+layout: post
+title:  "OpenAPI Reference"
+date:   2019-01-28 02:50:51 -0500
+categories: jekyll update
+---
+
+{% comment %} TODO: Build reusable blocks if any {% endcomment %}
+
+# {{ site.data.openapi.info.title }}
+
+{% comment %} Build table of references {% endcomment %}
+
+| Resource | Description |
+| --- | --- |{% for path in site.data.openapi.paths %}{% for method in path[1] %}
+| [{{ path[0] }}](#{{ path[0] | slugify }}) | {{ method[1].summary }} |{% endfor %}{% endfor %}
+
+{% comment %} Iterate through all API paths {% endcomment %}
+
+{% for path in site.data.openapi.paths %}
+## {{ path[0] }}
+  <hr />
+  {% for method in path[1] %}
+### {{ method[0] }}
+{{ method[1].summary }}
+{{ method[1].description }}
+
+#### Authentication
+{{ method[1].security }}
+
+#### Parameters
+
+| name | in | description | required | type | format |
+| --- | --- | --- | --- | --- | --- |{% for parameter in method[1].parameters %}
+| {{ parameter.name }} | {{ parameter.in }} | {{ parameter.description }} | {{ parameter.required }} | {{ parameter.type }} | {{ parameter.format }} |{% endfor %}
+
+#### Responses
+{{ method[1].responses }}
+
+  {% endfor %}
+{% endfor %}

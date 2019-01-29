@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-01-29T15:26:28-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">OpenAPI Reference</title><link href="http://localhost:4000/jekyll/update/2019/01/28/open-api.html" rel="alternate" type="text/html" title="OpenAPI Reference" /><published>2019-01-28T02:50:51-05:00</published><updated>2019-01-28T02:50:51-05:00</updated><id>http://localhost:4000/jekyll/update/2019/01/28/open-api</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/01/28/open-api.html">&lt;h1 id=&quot;swagger-petstore&quot;&gt;Swagger Petstore&lt;/h1&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Resource&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#pet&quot;&gt;/pet&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Add a new pet to the store&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#pet&quot;&gt;/pet&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Update an existing pet&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#pet-findbystatus&quot;&gt;/pet/findByStatus&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Finds Pets by status&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#pet-findbytags&quot;&gt;/pet/findByTags&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Finds Pets by tags&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#pet-petid&quot;&gt;/pet/{petId}&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Find pet by ID&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#pet-petid&quot;&gt;/pet/{petId}&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Updates a pet in the store with form data&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#pet-petid&quot;&gt;/pet/{petId}&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Deletes a pet&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#pet-petid-uploadimage&quot;&gt;/pet/{petId}/uploadImage&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;uploads an image&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#store-inventory&quot;&gt;/store/inventory&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Returns pet inventories by status&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#store-order&quot;&gt;/store/order&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Place an order for a pet&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#store-order-orderid&quot;&gt;/store/order/{orderId}&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Find purchase order by ID&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#store-order-orderid&quot;&gt;/store/order/{orderId}&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Delete purchase order by ID&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#user&quot;&gt;/user&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Create user&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#user-createwitharray&quot;&gt;/user/createWithArray&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Creates list of users with given input array&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#user-createwithlist&quot;&gt;/user/createWithList&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Creates list of users with given input array&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#user-login&quot;&gt;/user/login&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Logs user into the system&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#user-logout&quot;&gt;/user/logout&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Logs out current logged in user session&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#user-username&quot;&gt;/user/{username}&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Get user by user name&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#user-username&quot;&gt;/user/{username}&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Updated user&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;#user-username&quot;&gt;/user/{username}&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;Delete user&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;pet&quot;&gt;/pet&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;post&quot;&gt;post&lt;/h3&gt;
+&lt;p&gt;Add a new pet to the store&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication&quot;&gt;Authentication&lt;/h4&gt;
+&lt;p&gt;{“petstore_auth”=&amp;gt;[“write:pets”, “read:pets”]}&lt;/p&gt;
+
+&lt;h4 id=&quot;parameters&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;Pet object that needs to be added to the store&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{405=&amp;gt;{“description”=&amp;gt;”Invalid input”}}&lt;/p&gt;
+
+&lt;h3 id=&quot;put&quot;&gt;put&lt;/h3&gt;
+&lt;p&gt;Update an existing pet&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-1&quot;&gt;Authentication&lt;/h4&gt;
+&lt;p&gt;{“petstore_auth”=&amp;gt;[“write:pets”, “read:pets”]}&lt;/p&gt;
+
+&lt;h4 id=&quot;parameters-1&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;Pet object that needs to be added to the store&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-1&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{400=&amp;gt;{“description”=&amp;gt;”Invalid ID supplied”}, 404=&amp;gt;{“description”=&amp;gt;”Pet not found”}, 405=&amp;gt;{“description”=&amp;gt;”Validation exception”}}&lt;/p&gt;
+
+&lt;h2 id=&quot;petfindbystatus&quot;&gt;/pet/findByStatus&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;get&quot;&gt;get&lt;/h3&gt;
+&lt;p&gt;Finds Pets by status
+Multiple status values can be provided with comma separated strings&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-2&quot;&gt;Authentication&lt;/h4&gt;
+&lt;p&gt;{“petstore_auth”=&amp;gt;[“write:pets”, “read:pets”]}&lt;/p&gt;
+
+&lt;h4 id=&quot;parameters-2&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;status&lt;/td&gt;
+      &lt;td&gt;query&lt;/td&gt;
+      &lt;td&gt;Status values that need to be considered for filter&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;array&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-2&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{200=&amp;gt;{“description”=&amp;gt;”successful operation”, “schema”=&amp;gt;{“type”=&amp;gt;”array”, “items”=&amp;gt;{“$ref”=&amp;gt;”#/definitions/Pet”}}}, 400=&amp;gt;{“description”=&amp;gt;”Invalid status value”}}&lt;/p&gt;
+
+&lt;h2 id=&quot;petfindbytags&quot;&gt;/pet/findByTags&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;get-1&quot;&gt;get&lt;/h3&gt;
+&lt;p&gt;Finds Pets by tags
+Muliple tags can be provided with comma separated strings. Use         tag1, tag2, tag3 for testing.&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-3&quot;&gt;Authentication&lt;/h4&gt;
+&lt;p&gt;{“petstore_auth”=&amp;gt;[“write:pets”, “read:pets”]}&lt;/p&gt;
+
+&lt;h4 id=&quot;parameters-3&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;tags&lt;/td&gt;
+      &lt;td&gt;query&lt;/td&gt;
+      &lt;td&gt;Tags to filter by&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;array&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-3&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{200=&amp;gt;{“description”=&amp;gt;”successful operation”, “schema”=&amp;gt;{“type”=&amp;gt;”array”, “items”=&amp;gt;{“$ref”=&amp;gt;”#/definitions/Pet”}}}, 400=&amp;gt;{“description”=&amp;gt;”Invalid tag value”}}&lt;/p&gt;
+
+&lt;h2 id=&quot;petpetid&quot;&gt;/pet/{petId}&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;get-2&quot;&gt;get&lt;/h3&gt;
+&lt;p&gt;Find pet by ID
+Returns a single pet&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-4&quot;&gt;Authentication&lt;/h4&gt;
+&lt;p&gt;{“api_key”=&amp;gt;[]}&lt;/p&gt;
+
+&lt;h4 id=&quot;parameters-4&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;petId&lt;/td&gt;
+      &lt;td&gt;path&lt;/td&gt;
+      &lt;td&gt;ID of pet to return&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;integer&lt;/td&gt;
+      &lt;td&gt;int64&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-4&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{200=&amp;gt;{“description”=&amp;gt;”successful operation”, “schema”=&amp;gt;{“$ref”=&amp;gt;”#/definitions/Pet”}}, 400=&amp;gt;{“description”=&amp;gt;”Invalid ID supplied”}, 404=&amp;gt;{“description”=&amp;gt;”Pet not found”}}&lt;/p&gt;
+
+&lt;h3 id=&quot;post-1&quot;&gt;post&lt;/h3&gt;
+&lt;p&gt;Updates a pet in the store with form data&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-5&quot;&gt;Authentication&lt;/h4&gt;
+&lt;p&gt;{“petstore_auth”=&amp;gt;[“write:pets”, “read:pets”]}&lt;/p&gt;
+
+&lt;h4 id=&quot;parameters-5&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;petId&lt;/td&gt;
+      &lt;td&gt;path&lt;/td&gt;
+      &lt;td&gt;ID of pet that needs to be updated&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;integer&lt;/td&gt;
+      &lt;td&gt;int64&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;name&lt;/td&gt;
+      &lt;td&gt;formData&lt;/td&gt;
+      &lt;td&gt;Updated name of the pet&lt;/td&gt;
+      &lt;td&gt;false&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;status&lt;/td&gt;
+      &lt;td&gt;formData&lt;/td&gt;
+      &lt;td&gt;Updated status of the pet&lt;/td&gt;
+      &lt;td&gt;false&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-5&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{405=&amp;gt;{“description”=&amp;gt;”Invalid input”}}&lt;/p&gt;
+
+&lt;h3 id=&quot;delete&quot;&gt;delete&lt;/h3&gt;
+&lt;p&gt;Deletes a pet&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-6&quot;&gt;Authentication&lt;/h4&gt;
+&lt;p&gt;{“petstore_auth”=&amp;gt;[“write:pets”, “read:pets”]}&lt;/p&gt;
+
+&lt;h4 id=&quot;parameters-6&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;api_key&lt;/td&gt;
+      &lt;td&gt;header&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;false&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;petId&lt;/td&gt;
+      &lt;td&gt;path&lt;/td&gt;
+      &lt;td&gt;Pet id to delete&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;integer&lt;/td&gt;
+      &lt;td&gt;int64&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-6&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{400=&amp;gt;{“description”=&amp;gt;”Invalid ID supplied”}, 404=&amp;gt;{“description”=&amp;gt;”Pet not found”}}&lt;/p&gt;
+
+&lt;h2 id=&quot;petpetiduploadimage&quot;&gt;/pet/{petId}/uploadImage&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;post-2&quot;&gt;post&lt;/h3&gt;
+&lt;p&gt;uploads an image&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-7&quot;&gt;Authentication&lt;/h4&gt;
+&lt;p&gt;{“petstore_auth”=&amp;gt;[“write:pets”, “read:pets”]}&lt;/p&gt;
+
+&lt;h4 id=&quot;parameters-7&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;petId&lt;/td&gt;
+      &lt;td&gt;path&lt;/td&gt;
+      &lt;td&gt;ID of pet to update&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;integer&lt;/td&gt;
+      &lt;td&gt;int64&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;additionalMetadata&lt;/td&gt;
+      &lt;td&gt;formData&lt;/td&gt;
+      &lt;td&gt;Additional data to pass to server&lt;/td&gt;
+      &lt;td&gt;false&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;file&lt;/td&gt;
+      &lt;td&gt;formData&lt;/td&gt;
+      &lt;td&gt;file to upload&lt;/td&gt;
+      &lt;td&gt;false&lt;/td&gt;
+      &lt;td&gt;file&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-7&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{200=&amp;gt;{“description”=&amp;gt;”successful operation”, “schema”=&amp;gt;{“$ref”=&amp;gt;”#/definitions/ApiResponse”}}}&lt;/p&gt;
+
+&lt;h2 id=&quot;storeinventory&quot;&gt;/store/inventory&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;get-3&quot;&gt;get&lt;/h3&gt;
+&lt;p&gt;Returns pet inventories by status
+Returns a map of status codes to quantities&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-8&quot;&gt;Authentication&lt;/h4&gt;
+&lt;p&gt;{“api_key”=&amp;gt;[]}&lt;/p&gt;
+
+&lt;h4 id=&quot;parameters-8&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;p&gt;| name | in | description | required | type | format |
+| — | — | — | — | — | — |&lt;/p&gt;
+
+&lt;h4 id=&quot;responses-8&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{200=&amp;gt;{“description”=&amp;gt;”successful operation”, “schema”=&amp;gt;{“type”=&amp;gt;”object”, “additionalProperties”=&amp;gt;{“type”=&amp;gt;”integer”, “format”=&amp;gt;”int32”}}}}&lt;/p&gt;
+
+&lt;h2 id=&quot;storeorder&quot;&gt;/store/order&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;post-3&quot;&gt;post&lt;/h3&gt;
+&lt;p&gt;Place an order for a pet&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-9&quot;&gt;Authentication&lt;/h4&gt;
+
+&lt;h4 id=&quot;parameters-9&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;order placed for purchasing the pet&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-9&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{200=&amp;gt;{“description”=&amp;gt;”successful operation”, “schema”=&amp;gt;{“$ref”=&amp;gt;”#/definitions/Order”}}, 400=&amp;gt;{“description”=&amp;gt;”Invalid Order”}}&lt;/p&gt;
+
+&lt;h2 id=&quot;storeorderorderid&quot;&gt;/store/order/{orderId}&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;get-4&quot;&gt;get&lt;/h3&gt;
+&lt;p&gt;Find purchase order by ID
+For valid response try integer IDs with value &amp;gt;= 1 and &amp;lt;= 10.         Other values will generated exceptions&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-10&quot;&gt;Authentication&lt;/h4&gt;
+
+&lt;h4 id=&quot;parameters-10&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;orderId&lt;/td&gt;
+      &lt;td&gt;path&lt;/td&gt;
+      &lt;td&gt;ID of pet that needs to be fetched&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;integer&lt;/td&gt;
+      &lt;td&gt;int64&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-10&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{200=&amp;gt;{“description”=&amp;gt;”successful operation”, “schema”=&amp;gt;{“$ref”=&amp;gt;”#/definitions/Order”}}, 400=&amp;gt;{“description”=&amp;gt;”Invalid ID supplied”}, 404=&amp;gt;{“description”=&amp;gt;”Order not found”}}&lt;/p&gt;
+
+&lt;h3 id=&quot;delete-1&quot;&gt;delete&lt;/h3&gt;
+&lt;p&gt;Delete purchase order by ID
+For valid response try integer IDs with positive integer value.         Negative or non-integer values will generate API errors&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-11&quot;&gt;Authentication&lt;/h4&gt;
+
+&lt;h4 id=&quot;parameters-11&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;orderId&lt;/td&gt;
+      &lt;td&gt;path&lt;/td&gt;
+      &lt;td&gt;ID of the order that needs to be deleted&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;integer&lt;/td&gt;
+      &lt;td&gt;int64&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-11&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{400=&amp;gt;{“description”=&amp;gt;”Invalid ID supplied”}, 404=&amp;gt;{“description”=&amp;gt;”Order not found”}}&lt;/p&gt;
+
+&lt;h2 id=&quot;user&quot;&gt;/user&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;post-4&quot;&gt;post&lt;/h3&gt;
+&lt;p&gt;Create user
+This can only be done by the logged in user.&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-12&quot;&gt;Authentication&lt;/h4&gt;
+
+&lt;h4 id=&quot;parameters-12&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;Created user object&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-12&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{“default”=&amp;gt;{“description”=&amp;gt;”successful operation”}}&lt;/p&gt;
+
+&lt;h2 id=&quot;usercreatewitharray&quot;&gt;/user/createWithArray&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;post-5&quot;&gt;post&lt;/h3&gt;
+&lt;p&gt;Creates list of users with given input array&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-13&quot;&gt;Authentication&lt;/h4&gt;
+
+&lt;h4 id=&quot;parameters-13&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;List of user object&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-13&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{“default”=&amp;gt;{“description”=&amp;gt;”successful operation”}}&lt;/p&gt;
+
+&lt;h2 id=&quot;usercreatewithlist&quot;&gt;/user/createWithList&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;post-6&quot;&gt;post&lt;/h3&gt;
+&lt;p&gt;Creates list of users with given input array&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-14&quot;&gt;Authentication&lt;/h4&gt;
+
+&lt;h4 id=&quot;parameters-14&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;List of user object&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-14&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{“default”=&amp;gt;{“description”=&amp;gt;”successful operation”}}&lt;/p&gt;
+
+&lt;h2 id=&quot;userlogin&quot;&gt;/user/login&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;get-5&quot;&gt;get&lt;/h3&gt;
+&lt;p&gt;Logs user into the system&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-15&quot;&gt;Authentication&lt;/h4&gt;
+
+&lt;h4 id=&quot;parameters-15&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;username&lt;/td&gt;
+      &lt;td&gt;query&lt;/td&gt;
+      &lt;td&gt;The user name for login&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;password&lt;/td&gt;
+      &lt;td&gt;query&lt;/td&gt;
+      &lt;td&gt;The password for login in clear text&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-15&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{200=&amp;gt;{“description”=&amp;gt;”successful operation”, “schema”=&amp;gt;{“type”=&amp;gt;”string”}, “headers”=&amp;gt;{“X-Rate-Limit”=&amp;gt;{“type”=&amp;gt;”integer”, “format”=&amp;gt;”int32”, “description”=&amp;gt;”calls per hour allowed by the user”}, “X-Expires-After”=&amp;gt;{“type”=&amp;gt;”string”, “format”=&amp;gt;”date-time”, “description”=&amp;gt;”date in UTC when token expires”}}}, 400=&amp;gt;{“description”=&amp;gt;”Invalid username/password supplied”}}&lt;/p&gt;
+
+&lt;h2 id=&quot;userlogout&quot;&gt;/user/logout&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;get-6&quot;&gt;get&lt;/h3&gt;
+&lt;p&gt;Logs out current logged in user session&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-16&quot;&gt;Authentication&lt;/h4&gt;
+
+&lt;h4 id=&quot;parameters-16&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;p&gt;| name | in | description | required | type | format |
+| — | — | — | — | — | — |&lt;/p&gt;
+
+&lt;h4 id=&quot;responses-16&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{“default”=&amp;gt;{“description”=&amp;gt;”successful operation”}}&lt;/p&gt;
+
+&lt;h2 id=&quot;userusername&quot;&gt;/user/{username}&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;get-7&quot;&gt;get&lt;/h3&gt;
+&lt;p&gt;Get user by user name&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-17&quot;&gt;Authentication&lt;/h4&gt;
+
+&lt;h4 id=&quot;parameters-17&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;username&lt;/td&gt;
+      &lt;td&gt;path&lt;/td&gt;
+      &lt;td&gt;The name that needs to be fetched. Use user1 for testing.&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-17&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{200=&amp;gt;{“description”=&amp;gt;”successful operation”, “schema”=&amp;gt;{“$ref”=&amp;gt;”#/definitions/User”}}, 400=&amp;gt;{“description”=&amp;gt;”Invalid username supplied”}, 404=&amp;gt;{“description”=&amp;gt;”User not found”}}&lt;/p&gt;
+
+&lt;h3 id=&quot;put-1&quot;&gt;put&lt;/h3&gt;
+&lt;p&gt;Updated user
+This can only be done by the logged in user.&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-18&quot;&gt;Authentication&lt;/h4&gt;
+
+&lt;h4 id=&quot;parameters-18&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;username&lt;/td&gt;
+      &lt;td&gt;path&lt;/td&gt;
+      &lt;td&gt;name that need to be updated&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;body&lt;/td&gt;
+      &lt;td&gt;Updated user object&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-18&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{400=&amp;gt;{“description”=&amp;gt;”Invalid user supplied”}, 404=&amp;gt;{“description”=&amp;gt;”User not found”}}&lt;/p&gt;
+
+&lt;h3 id=&quot;delete-2&quot;&gt;delete&lt;/h3&gt;
+&lt;p&gt;Delete user
+This can only be done by the logged in user.&lt;/p&gt;
+
+&lt;h4 id=&quot;authentication-19&quot;&gt;Authentication&lt;/h4&gt;
+
+&lt;h4 id=&quot;parameters-19&quot;&gt;Parameters&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;name&lt;/th&gt;
+      &lt;th&gt;in&lt;/th&gt;
+      &lt;th&gt;description&lt;/th&gt;
+      &lt;th&gt;required&lt;/th&gt;
+      &lt;th&gt;type&lt;/th&gt;
+      &lt;th&gt;format&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;username&lt;/td&gt;
+      &lt;td&gt;path&lt;/td&gt;
+      &lt;td&gt;The name that needs to be deleted&lt;/td&gt;
+      &lt;td&gt;true&lt;/td&gt;
+      &lt;td&gt;string&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;responses-19&quot;&gt;Responses&lt;/h4&gt;
+&lt;p&gt;{400=&amp;gt;{“description”=&amp;gt;”Invalid username supplied”}, 404=&amp;gt;{“description”=&amp;gt;”User not found”}}&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2019/01/28/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-01-28T02:50:51-05:00</published><updated>2019-01-28T02:50:51-05:00</updated><id>http://localhost:4000/jekyll/update/2019/01/28/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2019/01/28/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
